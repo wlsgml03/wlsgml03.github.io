@@ -1,5 +1,25 @@
+/*Header section*/
+body {
+    background-color:blanchedalmond;
+}
 h1 {
     color: #556B2F;
     font-family: 'Mononoki', monospace;
     text-align: center;
+}
+/* About Section */
+.About {
+    background-color:aliceblue;
+    opacity: 0.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-color:cornflowerblue;
+    border-style: solid;
+    border-width: 2px;
+}
+.About img {
+    float: left;
+    margin-right: 10px;
 }
