@@ -1,6 +1,8 @@
 /*Header section*/
 body {
     background-color:blanchedalmond;
+    color: rgb(179,173,168);
+    font-family: 'Mononoki', monospace;
 }
 h1 {
     color: #556B2F;
@@ -9,8 +11,7 @@ h1 {
 }
 /* About Section */
 .About {
-    background-color:aliceblue;
-    opacity: 0.5;
+    background-color: rgba(240, 248, 255, 0.5);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -21,6 +22,5 @@ h1 {
 }
 .About img {
     float: left;
-    opacity: 1.0;
     margin-right: 10px;
 }
