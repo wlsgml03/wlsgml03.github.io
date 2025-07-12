@@ -23,4 +23,5 @@ h1 {
 .About img {
     float: left;
     margin-right: 10px;
+    border-radius: 50%;
 }
