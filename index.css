@@ -1,29 +1,31 @@
 /*Header section*/
 body {
-    background-color:blanchedalmond;
-    color: rgb(179,173,168);
+    background-color: cornflowerblue;
+    /* #blanchedalmond; */
     font-family: 'Mononoki', monospace;
 }
 h1 {
     color: #556B2F;
     font-family: 'Mononoki', monospace;
+    position: absolute;
     text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 /* About Section */
-.About {
-    background-color: rgba(240, 248, 255, 0.5);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    border-color:cornflowerblue;
-    border-style: solid;
-    border-width: 2px;
+/*house section*/
+.bouncing-element {
+    animation: bounce 2s infinite;
 }
-.About img {
-    background-color: white;
-    float: left;
-    margin-right: 10px;
-    border-radius: 50%;
-    object-fit: cover;
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+    50% {
+        transform: translateY(-20px);
+        animation-timing-function: ease-in-out;
+    }
 }
+
