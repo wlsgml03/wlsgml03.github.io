@@ -1,11 +1,11 @@
 /*Header section*/
 body {
-    background-color: cornflowerblue;
+    background-color: #F1FEFF;
     /* #blanchedalmond; */
     font-family: 'Mononoki', monospace;
 }
 h1 {
-    color: #556B2F;
+    color: #2a943a;
     font-family: 'Mononoki', monospace;
     position: absolute;
     text-align: center;
