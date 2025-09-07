@@ -13,19 +13,4 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
 }
-/* About Section */
-/*house section*/
-.bouncing-element {
-    animation: bounce 2s infinite;
-}
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-        animation-timing-function: ease-in-out;
-    }
-    50% {
-        transform: translateY(-20px);
-        animation-timing-function: ease-in-out;
-    }
-}
 
