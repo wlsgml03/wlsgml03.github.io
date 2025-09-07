@@ -1,11 +1,12 @@
 /*Header section*/
 body {
-    background-color: #d8eafc;
+    background-color: #d9f3fe;
     /* #blanchedalmond; */
     font-family: 'Mononoki', monospace;
 }
 h1 {
     color: #2a943a;
+    font-weight: 700;
     font-family: 'Mononoki', monospace;
     position: absolute;
     text-align: center;
