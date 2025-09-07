@@ -1,5 +1,5 @@
 //animation 1: header dropping in upon loading
-const heading = document.getAnimations("heading");
+const heading = document.getElementById("heading");
 let positionY = -200;
 let velocityY = 0;
 const gravity = 1.2;
@@ -18,7 +18,7 @@ function animateBounce() {
       return; // Stop the animation
     }
   }
-  element.style.transform = `translateY(-50%, ${positionY}px)`;
+  element.style.transform = `translate(-50%) translateY${positionY}px)`;
   requestAnimationFrame(animateBounce);
 }
 animateBounce();
