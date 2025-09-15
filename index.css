@@ -3,6 +3,7 @@ body {
     background-color: #d9f3fe;
     /* #blanchedalmond; */
     font-family: 'Mononoki', monospace;
+
 }
 h1 {
     color: #2a943a;
@@ -14,4 +15,11 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
 }
+house {
+    text-align: center;
+    margin-bottom: 0;
+    height: 800 px;
+    width: 800 px;
+}
+
 
