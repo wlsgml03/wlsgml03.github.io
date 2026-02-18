@@ -1,4 +1,4 @@
-<style>
+
   :root {
     --baby-blue: #b8d4f0;
     --sky: #d6eeff;
@@ -914,4 +914,3 @@
     .exp-header { flex-direction: column; }
     .exp-meta { text-align: left; }
   }
-</style>
