@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio — CS × AI × Robotics</title>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">jinhee<span>.dev</span></div>
+  <div class="nav-logo">yuna<span>.dev</span></div>
   <ul>
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -25,9 +25,9 @@
   <div class="hero-bg-blob blob2"></div>
 
   <div class="hero-text">
-    <div class="hero-tag">✦ Open to Full Time 2026</div>
+    <div class="hero-tag">✦ Open to internships 2025</div>
     <h1 class="hero-name">
-      Hi, I'm <br><span class="highlight">Jinhee Chang</span>
+      Hi, I'm <br><span class="highlight">Yuna Kim</span>
     </h1>
     <p class="hero-title">CS Student — AI × Robotics × Human-Computer Interaction</p>
     <p class="hero-desc">
@@ -43,11 +43,12 @@
     <div style="position:relative">
       <div class="float-tag float1">🤖 ROS2 certified</div>
       <div class="float-tag float2">🧠 PyTorch · TensorFlow</div>
+      <div class="float-tag float3">⭐ 3.9 GPA</div>
 
       <div class="hero-card">
-        <div class="card-avatar"><img src = "images/square.png" style="width:100%; height:100%; object-fit:cover; border-radius:50%;>/div>
-        <div class="card-name">Jinhee Chang</div>
-        <div class="card-role">CS Senior · Intel/People Track</div>
+        <div class="card-avatar">✨</div>
+        <div class="card-name">Yuna Kim</div>
+        <div class="card-role">CS Junior · AI/Robotics Track</div>
         <div class="card-skills">
           <span class="skill-pill pill-blue">Python</span>
           <span class="skill-pill pill-lavender">C++</span>
@@ -96,11 +97,125 @@
       </div>
       <div class="stat-card">
         <div class="stat-num">2×</div>
-        <div class="stat-label">robotics winner</div>
+        <div class="stat-label">hackathon winner</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">4+</div>
         <div class="stat-label">research papers read this week lol</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section" id="experience">
+  <div class="section-label">Where I've worked</div>
+  <h2 class="section-title">Experience ✦</h2>
+
+  <div class="folder-widget">
+    <div class="folder-tabs">
+      <div class="folder-tab active" data-tab="exp1">
+        <span class="tab-dot" style="background:#b8d4f0"></span>
+        AI Research Lab
+      </div>
+      <div class="folder-tab" data-tab="exp2">
+        <span class="tab-dot" style="background:#fcd5e0"></span>
+        Robotics Startup
+      </div>
+      <div class="folder-tab" data-tab="exp3">
+        <span class="tab-dot" style="background:#c2f0e8"></span>
+        Teaching Assistant
+      </div>
+    </div>
+
+    <div class="folder-body">
+      <div class="folder-topbar">
+        <div class="folder-dots">
+          <div class="folder-dot dot-red"></div>
+          <div class="folder-dot dot-yellow"></div>
+          <div class="folder-dot dot-green"></div>
+        </div>
+        <div class="folder-path">~/experience/professional</div>
+        <div class="folder-modified">last updated: fall 2024</div>
+      </div>
+
+      <div class="exp-panel active" id="exp1">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">University AI Research Lab</div>
+            <div class="exp-role">Undergraduate Researcher — NLP & Multimodal Systems</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Jan 2024 — Present</span>
+            <span class="exp-location">📍 On-campus</span>
+          </div>
+        </div>
+        <hr class="exp-divider">
+        <ul class="exp-bullets">
+          <li>Designed and ran experiments on vision-language alignment for robotic instruction following, contributing to an ongoing paper submission to ICRA 2025.</li>
+          <li>Built a data pipeline to scrape, clean, and annotate 50k+ image-caption pairs for multimodal fine-tuning using HuggingFace Datasets and custom Python scripts.</li>
+          <li>Reduced model inference latency by 32% through quantization and ONNX export, enabling real-time deployment on edge hardware.</li>
+          <li>Presented weekly literature reviews to a team of 8 researchers, covering recent advances in foundation models and embodied AI.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="skill-pill pill-lavender">PyTorch</span>
+          <span class="skill-pill pill-blue">HuggingFace</span>
+          <span class="skill-pill pill-mint">Python</span>
+          <span class="skill-pill pill-pink">ONNX</span>
+          <span class="skill-pill pill-blue">Multimodal LLMs</span>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="exp2">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Helix Robotics Co.</div>
+            <div class="exp-role">Software Engineering Intern — Autonomy Team</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">May 2023 — Aug 2023</span>
+            <span class="exp-location">📍 San Francisco, CA</span>
+          </div>
+        </div>
+        <hr class="exp-divider">
+        <ul class="exp-bullets">
+          <li>Developed a ROS2-based perception module for a warehouse robot, integrating LiDAR + RGB-D sensor fusion for robust obstacle detection in dynamic environments.</li>
+          <li>Implemented and benchmarked three SLAM algorithms (Cartographer, RTAB-Map, GMapping) to evaluate tradeoffs for indoor navigation accuracy vs. compute cost.</li>
+          <li>Collaborated with a team of 5 engineers in a fast-paced Agile sprint cycle, shipping two major features over a 12-week internship.</li>
+          <li>Wrote comprehensive unit and integration tests using pytest and ROS2 launch testing, achieving 87% code coverage on the perception stack.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="skill-pill pill-mint">ROS2</span>
+          <span class="skill-pill pill-lavender">C++</span>
+          <span class="skill-pill pill-blue">Python</span>
+          <span class="skill-pill pill-pink">SLAM</span>
+          <span class="skill-pill pill-mint">LiDAR</span>
+        </div>
+      </div>
+
+      <div class="exp-panel" id="exp3">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Dept. of Computer Science</div>
+            <div class="exp-role">Teaching Assistant — Intro to Machine Learning (CS 4780)</div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">Aug 2023 — Dec 2023</span>
+            <span class="exp-location">📍 [Your University]</span>
+          </div>
+        </div>
+        <hr class="exp-divider">
+        <ul class="exp-bullets">
+          <li>Held weekly office hours for a class of 120+ students, answering questions on supervised learning, gradient descent, neural networks, and model evaluation.</li>
+          <li>Designed and graded two programming assignments focused on implementing logistic regression and a feedforward neural network from scratch in NumPy.</li>
+          <li>Created supplemental tutorial notes on backpropagation and attention mechanisms that were adopted into the course's official study materials.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="skill-pill pill-blue">Teaching</span>
+          <span class="skill-pill pill-lavender">NumPy</span>
+          <span class="skill-pill pill-pink">Python</span>
+          <span class="skill-pill pill-mint">Curriculum Design</span>
+        </div>
       </div>
     </div>
   </div>
@@ -218,7 +333,7 @@
   <h2 class="section-title">Say hello! ✦</h2>
   <p class="contact-desc">Whether you want to collab on a robotics project, talk AI, or just vibe — my DMs are open.</p>
   <div class="contact-links">
-    <a href="mailto: jinheechang0329@gmail.com" class="contact-link">✉️ Email me</a>
+    <a href="/cdn-cgi/l/email-protection#7b020e151a3b1e161a121755181416" class="contact-link">✉️ Email me</a>
     <a href="#" class="contact-link">🔗 LinkedIn</a>
     <a href="#" class="contact-link">🐙 GitHub</a>
     <a href="#" class="contact-link">🐦 Twitter / X</a>
@@ -229,7 +344,18 @@
   designed & coded by <span>yuna kim</span> · built with ♡ and way too much matcha latte · 2025
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Folder tab switching
+  document.querySelectorAll('.folder-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.folder-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+
   // Animate skill bars on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -246,10 +372,4 @@
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-</script>
-</body>
-</html>
+      e.preventDef
