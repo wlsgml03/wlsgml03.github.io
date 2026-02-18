@@ -1,5 +1,4 @@
-
-  :root {
+:root {
     --baby-blue: #b8d4f0;
     --sky: #d6eeff;
     --lavender: #d4c8f5;
@@ -668,7 +667,8 @@
   .experience-section {
     background: var(--lavender);
     background-image: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.4) 0%, transparent 60%),
-                      radial-gradient(circle at 20% 80%, rgba(194,240,232,0.3) 0%, transparent 50%);
+                      radial-gradient(circle at 20% 80%, rgba(194,240,232,0.3) 0%, transparent 50%),
+                      linear-gradient(135deg, #d4c8f5, #c8bef0);
   }
 
   .folder-widget {
@@ -730,8 +730,14 @@
     backdrop-filter: blur(20px);
     border-radius: 0 16px 16px 16px;
     border: 1.5px solid rgba(184,165,232,0.5);
-    overflow: hidden;
+    overflow: visible;
     position: relative;
+  }
+
+  /* Clip only the visible area without hiding pseudo-elements */
+  .folder-body > * {
+    position: relative;
+    z-index: 1;
   }
 
   /* Ruled lines background */
