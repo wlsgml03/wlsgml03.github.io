@@ -257,17 +257,15 @@
     overflow: hidden;
     margin-bottom: 1rem;
     flex-shrink: 0;
+    isolation: isolate;
+    background: white;
   }
 
   .card-avatar img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  @keyframes spin-slow {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
   }
 
   .card-name {
