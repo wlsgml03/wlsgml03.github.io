@@ -114,7 +114,14 @@
   <h2 class="section-title">Experience ✦</h2>
 
   <div class="folder-widget">
-    <div class="folder-tabs"></div>
+    <div class="folder-tabs">
+      <div class="folder-tab active" data-tab="exp1">
+        <span class="tab-dot" style="background:#b8d4f0"></span>Deluxe Corporation
+      </div>
+      <div class="folder-tab" data-tab="exp2">
+        <span class="tab-dot" style="background:#fcd5e0"></span>Georgia Tech
+      </div>
+    </div>
 
     <div class="folder-body">
       <div class="folder-topbar">
@@ -193,9 +200,11 @@
     <div class="project-card">
       <div class="project-thumb thumb-1">🤖</div>
       <div class="project-body">
-        <div class="project-type">Robotics · Computer Vision</div>
+        <div class="project-type">Robotics · Spring 2026</div>
         <div class="project-name">Stretch Robot</div>
-        <p class="project-desc">A 6-DOF robotic arm that uses real-time depth sensing and a custom-trained CNN to pick and sort unknown objects by material type.</p>
+        <p class="project-desc">Developed an object detection and object retrieval system on the Stretch Robot Platform using ROS2 and Python to autonomouly detect objects in a home environment and retrieve them in order
+          to assist elderly users with daily tasks. These tasks can be controlled via a custom web application that works on both web and mobile.
+        </p>
         <div class="project-tags">
           <span class="skill-pill pill-blue">ROS2</span>
           <span class="skill-pill pill-lavender">PyTorch</span>
@@ -209,13 +218,13 @@
       <div class="project-thumb thumb-2">🧠</div>
       <div class="project-body">
         <div class="project-type">NLP · LLM Fine-tuning</div>
-        <div class="project-name">StudyBuddy AI</div>
+        <div class="project-name">F1 Pit Stop Optimizer</div>
         <p class="project-desc">A fine-tuned LLM that generates Socratic-style questions from uploaded lecture slides, helping students study actively rather than passively.</p>
         <div class="project-tags">
           <span class="skill-pill pill-lavender">LLaMA</span>
           <span class="skill-pill pill-blue">LoRA</span>
-          <span class="skill-pill pill-pink">Python</span>
-          <span class="skill-pill pill-mint">FastAPI</span>
+          <span class="skill-pill pill-pink">LSTM</span>
+          <span class="skill-pill pill-mint"></span>
         </div>
       </div>
     </div>
@@ -296,10 +305,10 @@
   <h2 class="section-title">Say hello! ✦</h2>
   <p class="contact-desc">Whether you want to collab on a robotics project, talk AI, or just vibe — my DMs are open.</p>
   <div class="contact-links">
-    <a href="/cdn-cgi/l/email-protection#7b020e151a3b1e161a121755181416" class="contact-link">✉️ Email me</a>
-    <a href="#" class="contact-link">🔗 LinkedIn</a>
-    <a href="#" class="contact-link">🐙 GitHub</a>
-    <a href="#" class="contact-link">🐦 Twitter / X</a>
+    <a href="mailto:jinheechang0329@gmail.com" class="contact-link">✉️ Email me</a>
+    <a href="https://www.linkedin.com/in/jinhee-chang/" class="contact-link">🔗 LinkedIn</a>
+    <a href="https://github.com/wlsgml03" class="contact-link">🐙 GitHub</a>
+    <a href="https://devpost.com/wlsgml03" class="contact-link">🚀 Devpost</a>
   </div>
 </section>
 
@@ -308,23 +317,14 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Auto-generate tabs from exp-panels
-  const tabColors = ['#b8d4f0', '#fcd5e0', '#c2f0e8', '#f5e6c8', '#d4b8f0'];
-  const panels = document.querySelectorAll('.exp-panel');
-  const tabContainer = document.querySelector('.folder-tabs');
-  panels.forEach((panel, i) => {
-    const company = panel.querySelector('.exp-company').textContent;
-    const tab = document.createElement('div');
-    tab.className = 'folder-tab' + (i === 0 ? ' active' : '');
-    tab.dataset.tab = panel.id;
-    tab.innerHTML = `<span class="tab-dot" style="background:${tabColors[i % tabColors.length]}"></span>${company}`;
+  // Tab switching
+  document.querySelectorAll('.folder-tab').forEach(tab => {
     tab.addEventListener('click', () => {
       document.querySelectorAll('.folder-tab').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
-      panel.classList.add('active');
+      document.getElementById(tab.dataset.tab).classList.add('active');
     });
-    tabContainer.appendChild(tab);
   });
 
   // Animate skill bars on scroll
