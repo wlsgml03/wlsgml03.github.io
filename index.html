@@ -114,20 +114,7 @@
   <h2 class="section-title">Experience ✦</h2>
 
   <div class="folder-widget">
-    <div class="folder-tabs">
-      <div class="folder-tab active" data-tab="exp1">
-        <span class="tab-dot" style="background:#b8d4f0"></span>
-        AI Research Lab
-      </div>
-      <div class="folder-tab" data-tab="exp2">
-        <span class="tab-dot" style="background:#fcd5e0"></span>
-        Robotics Startup
-      </div>
-      <div class="folder-tab" data-tab="exp3">
-        <span class="tab-dot" style="background:#c2f0e8"></span>
-        Teaching Assistant
-      </div>
-    </div>
+    <div class="folder-tabs"></div>
 
     <div class="folder-body">
       <div class="folder-topbar">
@@ -193,30 +180,6 @@
         </div>
       </div>
 
-      <!-- <div class="exp-panel" id="exp3">
-        <div class="exp-header">
-          <div>
-            <div class="exp-company">Dept. of Computer Science</div>
-            <div class="exp-role">Teaching Assistant — Intro to Machine Learning (CS 4780)</div>
-          </div>
-          <div class="exp-meta">
-            <span class="exp-date">Aug 2023 — Dec 2023</span>
-            <span class="exp-location">📍 [Your University]</span>
-          </div>
-        </div>
-        <hr class="exp-divider">
-        <ul class="exp-bullets">
-          <li>Held weekly office hours for a class of 120+ students, answering questions on supervised learning, gradient descent, neural networks, and model evaluation.</li>
-          <li>Designed and graded two programming assignments focused on implementing logistic regression and a feedforward neural network from scratch in NumPy.</li>
-          <li>Created supplemental tutorial notes on backpropagation and attention mechanisms that were adopted into the course's official study materials.</li>
-        </ul>
-        <div class="exp-tags">
-          <span class="skill-pill pill-blue">Teaching</span>
-          <span class="skill-pill pill-lavender">NumPy</span>
-          <span class="skill-pill pill-pink">Python</span>
-          <span class="skill-pill pill-mint">Curriculum Design</span>
-        </div>
-      </div> -->
     </div>
   </div>
 </section>
@@ -345,15 +308,23 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Folder tab switching
-  document.querySelectorAll('.folder-tab').forEach(tab => {
+  // Auto-generate tabs from exp-panels
+  const tabColors = ['#b8d4f0', '#fcd5e0', '#c2f0e8', '#f5e6c8', '#d4b8f0'];
+  const panels = document.querySelectorAll('.exp-panel');
+  const tabContainer = document.querySelector('.folder-tabs');
+  panels.forEach((panel, i) => {
+    const company = panel.querySelector('.exp-company').textContent;
+    const tab = document.createElement('div');
+    tab.className = 'folder-tab' + (i === 0 ? ' active' : '');
+    tab.dataset.tab = panel.id;
+    tab.innerHTML = `<span class="tab-dot" style="background:${tabColors[i % tabColors.length]}"></span>${company}`;
     tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
       document.querySelectorAll('.folder-tab').forEach(t => t.classList.remove('active'));
       document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
-      document.getElementById(target).classList.add('active');
+      panel.classList.add('active');
     });
+    tabContainer.appendChild(tab);
   });
 
   // Animate skill bars on scroll
