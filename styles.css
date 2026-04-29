@@ -898,6 +898,13 @@
     flex-shrink: 0;
   }
 
+  .exp-bullets a {
+    color: var(--lilac);
+    font-size: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
   .exp-tags {
     display: flex;
     flex-wrap: wrap;
