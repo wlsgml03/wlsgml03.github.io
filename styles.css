@@ -500,20 +500,21 @@
   }
 
   .phone-messages {
-    padding: 16px 14px 22px;
+    padding: 14px 12px 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
+    background: #ffffff;
   }
 
   .phone-timestamp {
     text-align: center;
     font-family: 'Space Mono', monospace;
-    font-size: 0.55rem;
-    color: var(--lilac);
+    font-size: 0.52rem;
+    color: #8e8e93;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 2px;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
   }
 
   .msg-row {
@@ -522,20 +523,65 @@
   }
 
   .msg-bubble {
-    background: linear-gradient(135deg, var(--periwinkle), var(--lilac));
+    background: linear-gradient(135deg, #7b9fe8, #a98de8);
     color: white;
-    padding: 10px 14px;
-    border-radius: 18px 18px 4px 18px;
+    padding: 10px 15px;
+    border-radius: 20px 20px 5px 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 0.88rem;
+    max-width: 80%;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  }
+
+  .msg-delivered {
+    text-align: right;
     font-family: 'Space Mono', monospace;
-    font-size: 0.78rem;
-    max-width: 85%;
-    line-height: 1.5;
+    font-size: 0.52rem;
+    color: #8e8e93;
+    padding-right: 2px;
+    margin-top: -2px;
+    margin-bottom: 4px;
   }
 
   .msg-embed {
     width: 100%;
     border-radius: 14px;
     overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  .phone-input-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px 14px;
+    background: rgba(255,255,255,0.95);
+    border-top: 1px solid rgba(0,0,0,0.07);
+    margin-top: 10px;
+  }
+
+  .phone-input-field {
+    flex: 1;
+    background: #f0f0f5;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: #8e8e93;
+  }
+
+  .phone-send-btn {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--periwinkle), var(--lilac));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
   /* PROJECTS */
