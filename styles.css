@@ -427,63 +427,115 @@
     margin-bottom: 1rem;
   }
 
-  .currently-widget {
-    background: white;
+  .phone-widget {
+    display: flex;
+    justify-content: center;
+  }
+
+  .phone-frame {
+    background: #1e1830;
+    border-radius: 44px;
+    padding: 14px;
+    width: 100%;
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.3),
+      0 0 0 1px rgba(255,255,255,0.07),
+      inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  .phone-island {
+    width: 88px;
+    height: 26px;
+    background: #0a0812;
     border-radius: 20px;
-    padding: 1.75rem;
-    border: 1px solid rgba(184,165,232,0.3);
-    box-shadow: 0 8px 32px rgba(143,168,232,0.1);
+    margin: 0 auto 10px;
   }
 
-  .currently-header {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--lilac);
+  .phone-screen {
+    background: #faf7ff;
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  .phone-header {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px);
+    padding: 12px 16px;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1.25rem;
+    gap: 10px;
+    border-bottom: 1px solid rgba(184,165,232,0.2);
   }
 
-  .currently-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .phone-back {
+    font-size: 1.6rem;
+    color: var(--periwinkle);
+    font-weight: 300;
+    line-height: 1;
+    margin-right: 2px;
   }
 
-  .currently-item {
+  .phone-contact-info {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
-    padding: 0.75rem 1rem;
-    border-radius: 12px;
-    background: var(--sky);
-    transition: transform 0.2s;
+    gap: 8px;
   }
 
-  .currently-item:hover { transform: translateX(4px); }
-
-  .currently-emoji {
-    font-size: 1.4rem;
-    flex-shrink: 0;
-  }
-
-  .currently-label {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--lilac);
-    margin-bottom: 0.15rem;
-  }
-
-  .currently-value {
-    font-family: 'Nanum Gothic', sans-serif;
+  .phone-avatar-circle {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--baby-blue), var(--lavender));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.9rem;
+  }
+
+  .phone-contact-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
     font-weight: 700;
     color: var(--text-dark);
+  }
+
+  .phone-messages {
+    padding: 16px 14px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .phone-timestamp {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.55rem;
+    color: var(--lilac);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2px;
+  }
+
+  .msg-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .msg-bubble {
+    background: linear-gradient(135deg, var(--periwinkle), var(--lilac));
+    color: white;
+    padding: 10px 14px;
+    border-radius: 18px 18px 4px 18px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    max-width: 85%;
+    line-height: 1.5;
+  }
+
+  .msg-embed {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
   }
 
   /* PROJECTS */
