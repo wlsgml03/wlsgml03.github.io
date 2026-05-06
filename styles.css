@@ -485,13 +485,11 @@
   }
 
   .project-thumb {
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
+    height: 180px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .thumb-1 { background: linear-gradient(135deg, var(--baby-blue), var(--lavender)); }
@@ -499,11 +497,37 @@
   .thumb-3 { background: linear-gradient(135deg, var(--blush), var(--lavender)); }
   .thumb-4 { background: linear-gradient(135deg, var(--lavender), var(--mint)); }
 
-  .project-thumb::after {
+  .thumb-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    flex-shrink: 0;
+  }
+
+  .thumb-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+  }
+
+  .thumb-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+    position: relative;
+  }
+
+  .thumb-preview::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(255,255,255,0.3));
+    background: linear-gradient(180deg, transparent 40%, rgba(255,255,255,0.2));
   }
 
   .project-body { padding: 1.5rem; }
@@ -538,7 +562,45 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    margin-bottom: 1rem;
   }
+
+  .project-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .proj-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .proj-link:hover { transform: translateY(-2px); }
+
+  .proj-link-code {
+    background: rgba(184,212,240,0.25);
+    border-color: var(--baby-blue);
+    color: var(--text-dark);
+  }
+
+  .proj-link-code:hover { background: var(--baby-blue); }
+
+  .proj-link-report {
+    background: rgba(220,210,240,0.25);
+    border-color: var(--lavender);
+    color: var(--text-dark);
+  }
+
+  .proj-link-report:hover { background: var(--lavender); }
 
   /* SKILLS */
   .skills-section { background: var(--cream); }
