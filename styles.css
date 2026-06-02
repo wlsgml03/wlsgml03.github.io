@@ -427,40 +427,161 @@
     margin-bottom: 1rem;
   }
 
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+  .phone-widget {
+    display: flex;
+    justify-content: center;
   }
 
-  .stat-card {
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
-    border: 1px solid rgba(184,165,232,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
+  .phone-frame {
+    background: #1e1830;
+    border-radius: 44px;
+    padding: 14px;
+    width: 100%;
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.3),
+      0 0 0 1px rgba(255,255,255,0.07),
+      inset 0 0 0 1px rgba(255,255,255,0.04);
   }
 
-  .stat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(143,168,232,0.2);
+  .phone-island {
+    width: 88px;
+    height: 26px;
+    background: #0a0812;
+    border-radius: 20px;
+    margin: 0 auto 10px;
   }
 
-  .stat-num {
-    font-family: 'Gaegu', cursive;
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--periwinkle), var(--lilac));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .phone-screen {
+    background: #faf7ff;
+    border-radius: 32px;
+    overflow: hidden;
   }
 
-  .stat-label {
-    font-size: 0.75rem;
-    color: var(--text-mid);
-    opacity: 0.7;
+  .phone-header {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(20px);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(184,165,232,0.2);
+  }
+
+  .phone-back {
+    font-size: 1.6rem;
+    color: var(--periwinkle);
+    font-weight: 300;
+    line-height: 1;
+    margin-right: 2px;
+  }
+
+  .phone-contact-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .phone-avatar-circle {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--baby-blue), var(--lavender));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .phone-contact-name {
     font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .phone-messages {
+    padding: 14px 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #ffffff;
+  }
+
+  .phone-timestamp {
+    text-align: center;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    color: #8e8e93;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+
+  .msg-row {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .msg-bubble {
+    background: linear-gradient(135deg, #7b9fe8, #a98de8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px 20px 5px 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 0.88rem;
+    max-width: 80%;
+    line-height: 1.4;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  }
+
+  .msg-delivered {
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.52rem;
+    color: #8e8e93;
+    padding-right: 2px;
+    margin-top: -2px;
+    margin-bottom: 4px;
+  }
+
+  .msg-embed {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  .phone-input-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px 14px;
+    background: rgba(255,255,255,0.95);
+    border-top: 1px solid rgba(0,0,0,0.07);
+    margin-top: 10px;
+  }
+
+  .phone-input-field {
+    flex: 1;
+    background: #f0f0f5;
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: #8e8e93;
+  }
+
+  .phone-send-btn {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--periwinkle), var(--lilac));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    flex-shrink: 0;
   }
 
   /* PROJECTS */
@@ -485,13 +606,11 @@
   }
 
   .project-thumb {
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
+    height: 180px;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .thumb-1 { background: linear-gradient(135deg, var(--baby-blue), var(--lavender)); }
@@ -499,11 +618,37 @@
   .thumb-3 { background: linear-gradient(135deg, var(--blush), var(--lavender)); }
   .thumb-4 { background: linear-gradient(135deg, var(--lavender), var(--mint)); }
 
-  .project-thumb::after {
+  .thumb-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(4px);
+    flex-shrink: 0;
+  }
+
+  .thumb-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+  }
+
+  .thumb-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.2rem;
+    position: relative;
+  }
+
+  .thumb-preview::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(255,255,255,0.3));
+    background: linear-gradient(180deg, transparent 40%, rgba(255,255,255,0.2));
   }
 
   .project-body { padding: 1.5rem; }
@@ -538,7 +683,45 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
+    margin-bottom: 1rem;
   }
+
+  .project-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .proj-link {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .proj-link:hover { transform: translateY(-2px); }
+
+  .proj-link-code {
+    background: rgba(184,212,240,0.25);
+    border-color: var(--baby-blue);
+    color: var(--text-dark);
+  }
+
+  .proj-link-code:hover { background: var(--baby-blue); }
+
+  .proj-link-report {
+    background: rgba(220,210,240,0.25);
+    border-color: var(--lavender);
+    color: var(--text-dark);
+  }
+
+  .proj-link-report:hover { background: var(--lavender); }
 
   /* SKILLS */
   .skills-section { background: var(--cream); }
